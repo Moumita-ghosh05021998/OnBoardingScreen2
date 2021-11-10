@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.onboardingscreen2">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo2"
+        android:label="CHHAYA-ALWAYS WITH YOU"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.OnBoardingScreen2">
+        <activity android:name=".MessageFamily" />
+
+        <activity android:name=".TricksToSafe" />
+        <activity android:name=".NearbyLocation" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".WomenSecurityLaw" />
+        <activity android:name=".EmergencyNumber" />
+        <activity android:name=".ADDINFO" />
+        <activity android:name=".FlashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_map_key" />
+
+        <service
+            android:name=".MyService"
+            android:enabled="true"
+            android:exported="true"></service>
+    </application>
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+</manifest>
